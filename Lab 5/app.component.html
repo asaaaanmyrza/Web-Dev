@@ -1,0 +1,11 @@
+
+<div *ngFor="let category of categories">
+  <button (click)="selectCategory(category)">{{ category }}</button>
+</div>
+
+<app-product-list 
+  *ngIf="selectedCategory" 
+  [products]="products[selectedCategory]" 
+  (remove)="removeProduct($event)"
+  (like)="likeProduct($event)">
+</app-product-list>

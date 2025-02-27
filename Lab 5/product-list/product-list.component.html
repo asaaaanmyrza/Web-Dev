@@ -1,0 +1,8 @@
+<div *ngFor="let product of products; let i = index">
+    <app-product-item
+      [product]="product"
+      [index]="i"
+      (remove)="removeProduct(i)"
+      (like)="likeProduct(i)">
+    </app-product-item>
+  </div>
